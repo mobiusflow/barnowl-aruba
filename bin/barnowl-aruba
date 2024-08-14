@@ -6,7 +6,7 @@ const DECODING_OPTIONS = {
   acceptTelemetryReports: true,
   historyMilliseconds: 2000,
 };
-const LISTENER_OPTIONS = { port: 3001, decodingOptions: DECODING_OPTIONS };
+const LISTENER_OPTIONS = { port: 30816, decodingOptions: DECODING_OPTIONS };
 
 let barnowl = new BarnowlAruba();
 
