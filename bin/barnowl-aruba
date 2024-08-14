@@ -1,19 +1,21 @@
 #!/usr/bin/env node
 
-const BarnowlAruba = require('../lib/barnowlaruba.js');
+const BarnowlAruba = require("../lib/barnowlaruba.js");
 
-const DECODING_OPTIONS = { acceptTelemetryReports: true,
-                           historyMilliseconds: 2000 };
+const DECODING_OPTIONS = {
+  acceptTelemetryReports: true,
+  historyMilliseconds: 2000,
+};
 const LISTENER_OPTIONS = { port: 3001, decodingOptions: DECODING_OPTIONS };
 
 let barnowl = new BarnowlAruba();
 
-barnowl.addListener(BarnowlAruba.WsListener, LISTENER_OPTIONS);
+barnowl.addListener(BarnowlAruba.TestListener, LISTENER_OPTIONS);
 
-barnowl.on('raddec', (raddec) => {
+barnowl.on("raddec", (raddec) => {
   console.log(raddec.toFlattened());
 });
 
-barnowl.on('infrastructureMessage', (infrastructureMessage) => {
+barnowl.on("infrastructureMessage", (infrastructureMessage) => {
   console.log(infrastructureMessage);
 });
