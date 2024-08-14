@@ -10,7 +10,7 @@ const LISTENER_OPTIONS = { port: 30816, decodingOptions: DECODING_OPTIONS };
 
 let barnowl = new BarnowlAruba();
 
-barnowl.addListener(BarnowlAruba.TestListener, LISTENER_OPTIONS);
+barnowl.addListener(BarnowlAruba.WsListener, LISTENER_OPTIONS);
 
 barnowl.on("raddec", (raddec) => {
   console.log(raddec.toFlattened());
