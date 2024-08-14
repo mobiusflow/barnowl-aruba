@@ -3,8 +3,8 @@
 const BarnowlAruba = require("../lib/barnowlaruba.js");
 
 const DECODING_OPTIONS = {
-  acceptTelemetryReports: true,
-  historyMilliseconds: 2000,
+  // acceptTelemetryReports: true,
+  // historyMilliseconds: 2000,
 };
 const LISTENER_OPTIONS = { port: 30816, decodingOptions: DECODING_OPTIONS };
 
